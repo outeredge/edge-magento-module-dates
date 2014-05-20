@@ -62,6 +62,12 @@ class Edge_Dates_AdminController extends Mage_Adminhtml_Controller_Action
                   ->setId($this->getRequest()->getParam('id'));
 
             try {
+                
+                if ($data['date'] !== null){
+                    $date = Mage::app()->getLocale()->date($data['date'], Zend_Date::DATE_SHORT, null, false);
+                    $model->setDate($date->toString('YYYY-MM-dd HH:mm:ss'));
+                }
+                
                 $model->save();
 
                 Mage::getSingleton('adminhtml/session')->addSuccess(Mage::helper('dates')->__('Item was successfully saved.'));
