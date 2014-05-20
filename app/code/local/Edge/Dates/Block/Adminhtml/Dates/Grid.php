@@ -26,9 +26,9 @@ class Edge_Dates_Block_Adminhtml_Dates_Grid extends Mage_Adminhtml_Block_Widget_
             'index'     => 'id'
         ));
         
-        $this->addColumn('name', array(
-            'header'    => Mage::helper('dates')->__('Name'),
-            'index'     => 'name'
+        $this->addColumn('title', array(
+            'header'    => Mage::helper('dates')->__('Title'),
+            'index'     => 'title'
         ));
         
         $this->addColumn('date', array(
