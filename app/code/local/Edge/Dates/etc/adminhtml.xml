@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <menu>
+        <dates module="dates">
+            <title>Dates</title>
+            <sort_order>100</sort_order>
+            <action>dates/admin</action>
+        </dates>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <dates>
+                        <title>Dates</title>
+                        <sort_order>100</sort_order>
+                    </dates>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

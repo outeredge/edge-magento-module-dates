@@ -1,0 +1,27 @@
+{
+    "name": "outeredge/edge-magento-module-dates",
+    "type": "magento-module",
+    "description": "Dates Module by outer/edge",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "outer/edge",
+            "email": "support@outeredgeuk.com"
+        }
+    ],
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:outeredge/edge-magento-module-dates.git"
+        }
+    ],
+    "extra": {
+        "map": [
+            ["app/code/local/Edge/Dates", "app/code/local/Edge/Dates"],
+            ["app/etc/modules/Edge_Dates.xml", "app/etc/modules/Edge_Dates.xml"]
+        ]
+    }
+}
