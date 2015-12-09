@@ -3,6 +3,11 @@
 class Edge_Dates_AdminController extends Mage_Adminhtml_Controller_Action
 {
     protected $model;
+    
+    protected function _isAllowed()
+    {
+        return Mage::getSingleton('admin/session')->isAllowed('system/dates');
+    }
 
     protected function _initAction()
     {
@@ -16,7 +21,7 @@ class Edge_Dates_AdminController extends Mage_Adminhtml_Controller_Action
 
     protected function _initModel()
     {
-        $this->model = Mage::getModel('system/dates');
+        $this->model = Mage::getModel('dates/dates');
 
         $id = $this->getRequest()->getParam('id', false);
         if ($id !== false){
